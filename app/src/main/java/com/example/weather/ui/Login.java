@@ -47,7 +47,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Login.this, MainActivity.class);
                 startActivity(intent);
-                fireBaseData.getmDatabase().child("Users").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                fireBaseData.getDatabase().child("Users").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DataSnapshot> task) {
                         try {
